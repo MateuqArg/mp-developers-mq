@@ -27,7 +27,7 @@ Route::get('/', 'MainController@index')->name('index');
 
 Route::get('/carrito', 'CartController@index')->name('cart');
 
-Route::get('/notifications', 'CartController@index');
+Route::get('/notifications', 'CartController@notifications');
 
 Route::get('/agregar/{id}', 'CartController@addProduct');
 
