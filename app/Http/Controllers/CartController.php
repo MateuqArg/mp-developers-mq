@@ -223,9 +223,8 @@ class CartController extends Controller
 
     public function success(Request $request)
     {
-        dd($request);
 
-        return view('success');
+        return view('cart.success', compact('request'));
     }
 
     public function thanks(Request $request, $customid)
