@@ -9,8 +9,8 @@
   <div style="padding-top: 80px;"></div>
 	<div class="row">
     <div class="col-md-7">
-      <img src="{{ asset('/images/success.jpg') }}" alt="">
-      <p>Pago hecho correctamente</p>
+      <img src="{{ asset('/images/pending.jpg') }}" alt="">
+      <p>Pago pendiente</p>
     	<p>payment_method_id: {{ $request->payment_type }}</p>
       <p>external_reference: {{ $request->external_reference }}</p>
       <p>collection_id: {{ $request->collection_id }}</p>

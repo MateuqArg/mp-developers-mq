@@ -224,8 +224,17 @@ class CartController extends Controller
 
     public function success(Request $request)
     {
-dd($request);
         return view('cart.success', compact('request'));
+    }
+
+    public function pending(Request $request)
+    {
+        return view('cart.pending', compact('request'));
+    }
+
+    public function failure(Request $request)
+    {
+        return view('cart.failure', compact('request'));
     }
 
     public function thanks(Request $request, $customid)
