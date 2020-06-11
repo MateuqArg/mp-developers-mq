@@ -13,7 +13,7 @@ class MainController extends Controller
 {
     public function index()
     {
-    	// $most_visited = Product::all()->sortByDesc('visits')->take(4);
+    	$most_visited = Product::all()->sortByDesc('visits')->take(4);
 
     	// $sliders = Slider::all();
 
@@ -23,6 +23,6 @@ class MainController extends Controller
 
     	// $media = array_sum($numeros)/count($numeros);
 
-    	return view('home');
+    	return view('home', compat('most_visited'));
     }
 }

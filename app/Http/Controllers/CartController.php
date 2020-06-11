@@ -21,11 +21,11 @@ class CartController extends Controller
 
     	$total = 0;
 
-//       if (session('cart')) {
-//     	 foreach ($cart->products as $product) {
-//     		  $total = $total + $product->price * $product->pivot->quantity; 
-//     	 }
-//       }
+      if (session('cart')) {
+    	 foreach ($cart->products as $product) {
+    		  $total = $total + $product->price * $product->pivot->quantity; 
+    	 }
+      }
 
 //       if (auth()->user()) {
 

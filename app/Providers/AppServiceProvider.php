@@ -27,22 +27,22 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         
-        // view()->composer('*', function ($view) 
-        // {
-        //     if (session('cart')) {
-        //         $cart = session('cart')->fresh();
-        //     } else {
-        //         $cart = null;
-        //     }
+        view()->composer('*', function ($view) 
+        {
+            if (session('cart')) {
+                $cart = session('cart')->fresh();
+            } else {
+                $cart = null;
+            }
 
-        //     if ($cart) {
-        //         $count_cart = count($cart->products);
-        //     } else {
-        //         $count_cart = 0;
-        //     }
+            if ($cart) {
+                $count_cart = count($cart->products);
+            } else {
+                $count_cart = 0;
+            }
 
-        //     $view->with('count_cart', $count_cart );  
-        // });  
+            $view->with('count_cart', $count_cart );  
+        });  
 
         // $categories = Category::all();
 
