@@ -39,6 +39,8 @@ Route::get('/success', 'CartController@success');
 
 Route::get('/thanks/{customid}', 'CartController@thanks')->name('thanks');
 
+Route::get('image/{filename}', 'MainController@displayImage')->name('image.displayImage');
+
 Route::get('/logout', function () {
 
 	Auth::logout();

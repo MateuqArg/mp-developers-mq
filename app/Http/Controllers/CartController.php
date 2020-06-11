@@ -143,7 +143,7 @@ class CartController extends Controller
         $item->currency_id = 'ARS';
         $item->unit_price = 123;
         $item->picture_url = 'Foto del producto seleccionado.';
-        $item->description = '“Dispositivo móvil de Tienda e-commerce”';
+        $item->description = 'Dispositivo móvil de Tienda e-commerce';
         $productos[] = $item;
 
         $preference->items = $productos;
