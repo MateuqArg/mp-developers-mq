@@ -171,7 +171,7 @@ class CartController extends Controller
 
         $preference->auto_return = "approved";
 
-        $preference->notification_url = "http://127.0.0.1:8000/notifications";
+        // $preference->notification_url = "http://127.0.0.1:8000/notifications";
         
         $preference->save();
 
