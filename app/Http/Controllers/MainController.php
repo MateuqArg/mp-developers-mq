@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Ignacio\MercadoPago\MP;
 use App\Category;
 use App\Product;
 use App\Slider;
@@ -31,16 +30,16 @@ class MainController extends Controller
 
     $path = storage_path('app/public/' . $filename);
 
-    if (!File::exists($path)) {
+    if (!\File::exists($path)) {
         abort(404);
 
     }
 
-    $file = File::get($path);
+    $file = \File::get($path);
 
-    $type = File::mimeType($path);
+    $type = \File::mimeType($path);
 
-    $response = Response::make($file, 200);
+    $response = \Response::make($file, 200);
 
     $response->header("Content-Type", $type); 
 
