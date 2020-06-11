@@ -49,7 +49,7 @@
       <ul class="navbar-nav">
         <li class="nav-item
         {{ (request()->is('/carrito')) ? 'active' : '' }}">
-          <a class="btn principal-color" href="{{ url('/carrito') }}"><span class="material-icons">shopping_cart</span> <span class="badge-cart badge badge-danger">{{ $count_cart }}</span></a>
+          <a class="btn principal-color" href="{{ url('/carrito') }}"><span class="material-icons">shopping_cart</span> <span class="badge-cart badge badge-danger">{{-- {{ $count_cart }} --}}1</span></a>
       @if(!Auth::user())
         </li>
         <li class="nav-item ml-md-3">
