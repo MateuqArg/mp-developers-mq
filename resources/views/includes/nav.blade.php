@@ -103,9 +103,9 @@
             Categorias <span class="info-icon material-icons">keyboard_arrow_down</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            @foreach($categories as $category)
+            {{-- @foreach($categories as $category)
               <a class="dropdown-item" href="{{ url('/categorias/'.$category->slug) }}">{{ $category->name }}</a>
-            @endforeach
+            @endforeach --}}
           </div>
         </li>
         <li class="nav-item

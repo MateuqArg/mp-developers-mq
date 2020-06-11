@@ -9,20 +9,20 @@
 	<div class="col-md-12 no-padding">
 		<div id="slider" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators" style="bottom: 20px;">
-				@foreach($sliders as $slider)
+				{{-- @foreach($sliders as $slider)
     			<li data-target="#slider" data-slide-to="{{ $loop->iteration-1 }}" 
     				class="@if($loop->iteration == 1) active @endif"></li>
-    			@endforeach
+    			@endforeach --}}
   			</ol>
   			<div class="carousel-inner" role="listbox">
-  				@foreach($sliders as $slider)
+  				{{-- @foreach($sliders as $slider)
     			<div class="carousel-item 
     			@if($loop->iteration == 1) active @endif"
     			ondblclick="slider({{ $loop->iteration }})">
       				<img class="banner-img bottom-30"
       				src="{{ asset('/images/'.$slider->img) }}" alt="banner">
     			</div>
-    			@endforeach
+    			@endforeach --}}
   			</div>
   			<a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
     		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -71,7 +71,7 @@
 		</div>
 		<div class="col-md-7 col-12 mt-4 mt-sm-0 mt-md-0 mt-lg-0">
 			<div class="offer-info">
-				<h3 class="title">{{ $unique->product->name }}</h3>
+				{{-- <h3 class="title">{{ $unique->product->name }}</h3>
 				<p>{{ $unique->product->description }}</p>
 				<div style="display: none;" data-countdown="{{ $unique->final_date }}"></div>
 				<div class="stars">
@@ -87,7 +87,7 @@
 				<div class="offer-price">
 					<h5><s>${{ $unique->product->price }}</s> <span class="offer-discount">${{ $unique->offer }}</span></h5>
 				</div>
-				<div class="btn btn-success offer-btn">AGREGAR AL CARRITO</div>
+				<div class="btn btn-success offer-btn">AGREGAR AL CARRITO</div> --}}
 			</div>
 		</div>
 	</div>
@@ -120,7 +120,7 @@
 		</div>
 	</div>
 	<div class="row bottom-30">
-		@foreach($most_visited as $product)
+		{{-- @foreach($most_visited as $product)
 		<div class="col-md-3 col-6 product">
 			<a href="{{ route('product.show', ['slug' => $product->slug, 'category' => $product->category->slug]) }}" class="product-link" style="color: inherit;">
 			<img class="product-img" src="https://via.placeholder.com/400x400" alt="producto">
@@ -135,7 +135,7 @@
 			@endif
 			</a>
 		</div>
-		@endforeach
+		@endforeach --}}
 	</div>
 	<div class="row">
 		<div class="col-md-12">
@@ -143,7 +143,7 @@
 		</div>
 	</div>
 	<div class="row">
-		@foreach($most_visited as $product)
+		{{-- @foreach($most_visited as $product)
 		<div class="col-md-3 col-6 product">
 			<a href="{{ route('product.show', ['category' => $product->category->slug, 'slug' => $product->slug]) }}" class="product-link" style="color: inherit;">
 			<img class="product-img" src="https://via.placeholder.com/400x400" alt="producto">
@@ -158,7 +158,7 @@
 			@endif
 			</a>
 		</div>
-		@endforeach
+		@endforeach --}}
 	</div>
 </div>
 
