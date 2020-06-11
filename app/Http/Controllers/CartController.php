@@ -191,7 +191,6 @@ class CartController extends Controller
 
     public function notifications(Request $request) 
     {
-   Log::info($request);
 
       return header("HTTP/1.1 200 OK");
       return \Response::json(['HTTP/1.1 200 OK'], 200);
@@ -225,7 +224,7 @@ class CartController extends Controller
 
     public function success(Request $request)
     {
-
+dd($request);
         return view('cart.success', compact('request'));
     }
 
