@@ -24,7 +24,6 @@ class MainController extends Controller
 
     	return view('home', compact('most_visited'));
     }
-
     public function displayImage($filename)
     {
 
