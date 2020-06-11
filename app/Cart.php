@@ -7,7 +7,7 @@ use App\Product;
 
 class Cart extends Model
 {
-    protected $fillable = ['ecommerce.mp_response'];
+    protected $fillable = ['mp_response'];
 
     public function products()
     {

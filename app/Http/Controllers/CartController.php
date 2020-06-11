@@ -137,19 +137,19 @@ class CartController extends Controller
         // }
 
         $item = new \MercadoPago\Item();
-            $item->id = '1234';
-            $item->title = "Nombre del producto seleccionado del carrito del ejercicio.";
-            $item->quantity = 1;
-            $item->currency_id = 'ARS';
-            $item->unit_price = 123;
-            $item->picture_url = 'Foto del producto seleccionado.';
-            $item->description = '“Dispositivo móvil de Tienda e-commerce”';
-            $productos[] = $item;
+        $item->id = '1234';
+        $item->title = "Nombre del producto seleccionado del carrito del ejercicio.";
+        $item->quantity = 1;
+        $item->currency_id = 'ARS';
+        $item->unit_price = 123;
+        $item->picture_url = 'Foto del producto seleccionado.';
+        $item->description = '“Dispositivo móvil de Tienda e-commerce”';
+        $productos[] = $item;
 
         $preference->items = $productos;
 
         $payer = new \MercadoPago\Payer();
-  		  $payer->email = "test_user_63274575@testuser.com";
+  		$payer->email = "test_user_63274575@testuser.com";
         $payer->name = "Lalo";
         $payer->surname = "Landa";
         $payer->phone = array('area_code' => '11', 
@@ -160,9 +160,9 @@ class CartController extends Controller
   		  $preference->payer = $payer;
 
         $preference->back_urls = [
-            'success' => url('/mp/success'),
-            'failure' => url('/mp/failure'),
-            'pending' => url('/mp/pending'),
+            'success' => url('/success'),
+            'failure' => url('/failure'),
+            'pending' => url('/pending'),
         ];
 
         $preference->installments = 1;
@@ -171,7 +171,7 @@ class CartController extends Controller
 
         $preference->auto_return = "approved";
 
-        $preference->notification_url = "http://127.0.0.1:8000/notifications";
+        // $preference->notification_url = "http://127.0.0.1:8000/notifications";
         
         $preference->save();
 
@@ -210,6 +210,13 @@ class CartController extends Controller
 
         return redirect()->route('thanks', $customid)->with('customid', $customid);
    	}
+
+    public function success(Request $request, $customid)
+    {
+        dd($request);
+
+        return view('success');
+    }
 
     public function thanks(Request $request, $customid)
     {

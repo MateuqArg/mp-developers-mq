@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'ecommerce.name', 'ecommerce.email', 'ecommerce.password',
+        'name', 'email', 'password',
     ];
 
     public function roles()
