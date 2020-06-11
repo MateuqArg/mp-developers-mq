@@ -142,7 +142,7 @@ class CartController extends Controller
         $item->quantity = 1;
         $item->currency_id = 'ARS';
         $item->unit_price = 123;
-        $item->picture_url = 'Foto del producto seleccionado.';
+        $item->picture_url = 'https://via.placeholder.com/500x500';
         $item->description = 'Dispositivo móvil de Tienda e-commerce';
         $productos[] = $item;
 
@@ -224,6 +224,7 @@ class CartController extends Controller
 
     public function success(Request $request)
     {
+        dd($request);
         return view('cart.success', compact('request'));
     }
 
