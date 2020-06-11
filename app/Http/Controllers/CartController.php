@@ -169,6 +169,16 @@ class CartController extends Controller
 
         $preference->external_reference = "mateuqarg@gmail.com";
 
+        $preference->payment_methods = array(
+            "excluded_payment_methods" => array(
+                array("id" => "amex")
+            ),
+            "excluded_payment_types" => array(
+                array("id" => "atm")
+            ),
+                "installments" => 6
+            );
+
         $preference->auto_return = "approved";
 
         $preference->notification_url = url('/notifications');
