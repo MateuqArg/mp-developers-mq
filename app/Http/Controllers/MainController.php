@@ -23,6 +23,6 @@ class MainController extends Controller
 
     	// $media = array_sum($numeros)/count($numeros);
 
-    	return view('home', compact('most_visited', 'sliders', 'unique'));
+    	return view('home');
     }
 }
