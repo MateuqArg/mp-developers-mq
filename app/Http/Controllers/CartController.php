@@ -211,7 +211,7 @@ class CartController extends Controller
         return redirect()->route('thanks', $customid)->with('customid', $customid);
    	}
 
-    public function success(Request $request, $customid)
+    public function success(Request $request)
     {
         dd($request);
 
