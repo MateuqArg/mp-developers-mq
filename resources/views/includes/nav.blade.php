@@ -204,11 +204,11 @@
 
   <h6 class="text-uppercase mb-1">Categorias</h6>
   <ul class="list-unstyled components mb-3">
-    @foreach($categories as $category)
+    {{-- @foreach($categories as $category)
     <li>
       <a href="{{ url('/categorias/'.$category->slug) }}">{{ $category->name }}</a>
     </li>
-    @endforeach
+    @endforeach --}}
   </ul>
 </nav>
 
