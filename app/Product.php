@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $fillable = ['name', 'description', 'category_id', 'img'];
+    protected $fillable = ['ecommerce.name', 'ecommerce.description', 'ecommerce.category_id', 'ecommerce.img'];
 
     public function unique()
     {
